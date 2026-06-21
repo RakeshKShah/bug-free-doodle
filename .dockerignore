@@ -1,0 +1,19 @@
+# Exclude development noise from the Docker build context
+node_modules/
+.git/
+frontend/
+dist/
+dist-lambda/
+coverage/
+*.log
+.env
+.env.*
+.DS_Store
+*.tsbuildinfo
+
+# Explicitly keep build-critical files (not excluded above, but listed for clarity):
+# package-lock.json  -- present; npm ci needs it
+# prisma/            -- schema + migrations needed for generate + migrate deploy
+# .codevalid/        -- entrypoint.sh is COPY'd in from here
+# tsconfig.json      -- needed by tsc
+# prisma.config.ts   -- Prisma 7 datasource/migration config
