@@ -4,7 +4,7 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 npm-debug.log*
-package-lock.json
+# package-lock.json  # kept for build context (npm ci in .codevalid/Dockerfile)
 yarn.lock
 pnpm-lock.yaml
 .env
@@ -28,7 +28,7 @@ postcss.config.js
 
 # Prisma
 /prisma/dev.db
-/prisma/migrations/
+# /prisma/migrations/  # kept for build context (prisma migrate deploy in entrypoint)
 **/schema.prisma.lock
 *.db
 *.sqlite
